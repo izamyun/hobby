@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>朝ドラ・大河 主人公の生没年 線表</title>
+<style>
+:root{--bg:#f4f1ea;--fg:#1d1f24;--mu:#7a7d85;--ln:#d9d4c8;--bd:rgba(0,0,0,.08);--t1:#e4572e;--t2:#f2a65a;--a1:#1b998b;--a2:#4cc9f0;--ol:#fff;--sh:0 2px 8px rgba(0,0,0,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1118;--fg:#e8eaf0;--mu:#8b90a0;--ln:#232838;--bd:rgba(255,255,255,.08);--sh:0 0 12px rgba(120,160,255,.25)}}
+:root[data-theme="dark"]{--bg:#0e1118;--fg:#e8eaf0;--mu:#8b90a0;--ln:#232838;--bd:rgba(255,255,255,.08);--sh:0 0 12px rgba(120,160,255,.25)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Hiragino Sans",sans-serif;padding:14px 0 18px}
+header,#info,.bar,footer{padding:0 14px}
+h1{font-size:20px;margin:0 0 2px;letter-spacing:.06em;font-weight:800}h1 span{background:linear-gradient(90deg,var(--t1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mu);font-size:12px;margin:0 0 10px}
+.bar{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+button{font:inherit;font-size:13px;color:var(--mu);background:transparent;border:1px solid var(--ln);border-radius:99px;padding:4px 14px}
+button.on{color:var(--bg);background:var(--fg);border-color:var(--fg)}
+label{margin-left:auto;font-size:12px;color:var(--mu);display:flex;align-items:center;gap:6px}input{width:90px}
+#info{min-height:2.6em;font-size:13px;margin-bottom:6px}#info b{font-size:15px}
+#sc{overflow:auto;max-height:72vh;border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);-webkit-overflow-scrolling:touch}
+#w{position:relative}
+.ax{position:sticky;top:0;z-index:5;height:26px;background:var(--bg);border-bottom:1px solid var(--ln);font-size:11px;color:var(--mu)}
+.ax span{position:absolute;top:6px;transform:translateX(-50%)}
+.gl{position:absolute;top:26px;bottom:0;width:1px;background:var(--ln);opacity:.7}
+.bd{position:absolute;top:26px;bottom:0;background:var(--fg);opacity:.09;z-index:0;pointer-events:none}
+.r{display:flex;height:52px;position:relative;z-index:1;cursor:pointer;transition:opacity .15s}
+.r.dim{opacity:.22}
+.lb{position:sticky;left:0;z-index:3;flex:none;width:150px;background:var(--bg);padding:3px 6px 0 14px;border-right:1px solid var(--ln);overflow:hidden;white-space:nowrap}
+.lb b{display:block;font-size:13px}.lb small{display:block;color:var(--mu);font-size:11px;line-height:1.35}
+.tk{position:relative;flex:none}
+.bar1{position:absolute;top:13px;height:26px;border-radius:7px;color:#fff;font-size:11px;line-height:26px;padding:0 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;box-shadow:var(--sh)}
+.bar1.T{background:linear-gradient(90deg,var(--t1),var(--t2))}.bar1.A{background:linear-gradient(90deg,var(--a1),var(--a2))}
+.ob{position:absolute;top:10px;height:36px;border:2px solid var(--fg);border-radius:9px;box-sizing:border-box;pointer-events:none}
+.r.sel .bar1{outline:2px solid var(--fg)}
+footer{color:var(--mu);font-size:11.5px;margin-top:8px}
+</style></head><body>
+<header><h1><span>ドラマ主人公 生没年 線表</span></h1><p class="sub">大河・朝ドラ 2006〜2026　横にスクロール／バーをタップで重なりを表示</p></header>
+<div class="bar"><button data-f="all" class="on">すべて</button><button data-f="T">大河</button><button data-f="A">朝ドラ</button><label>拡大<input id="z" type="range" min="1.2" max="4" step=".2" value="2.4"></label></div>
+<div id="info"></div>
+<div id="sc"><div id="w"></div></div>
+<footer>?は生没年に諸説。没年なしは存命（2026年として表示）。省略区間(1230〜1480年)は⋯で詰めています。朝ドラは実在モデルのある作品のみ。括弧内は主人公を演じた役者。作品名の横は放送年（朝ドラは上期4〜9月・下期10〜3月）。</footer>
+<script>
+const D=[
+["T","光る君へ",2024,"紫式部","吉高由里子",973,1014,1],["T","平清盛",2012,"平清盛","松山ケンイチ",1118,1181],["T","鎌倉殿の13人",2022,"北条義時","小栗旬",1163,1224],
+["T","豊臣兄弟!",2026,"豊臣秀長","仲野太賀",1540,1591],["T","どうする家康",2023,"徳川家康","松本潤",1543,1616],["T","功名が辻",2006,"山内一豊","上川隆也",1545,1605],
+["T","軍師官兵衛",2014,"黒田官兵衛","岡田准一",1546,1604],["T","風林火山",2007,"山本勘助","内野聖陽",1493,1561,1],["T","麒麟がくる",2020,"明智光秀","長谷川博己",1528,1582,1],
+["T","天地人",2009,"直江兼続","妻夫木聡",1560,1620],["T","真田丸",2016,"真田信繁","堺雅人",1567,1615,1],["T","江",2011,"江","上野樹里",1573,1626],
+["T","おんな城主 直虎",2017,"井伊直虎","柴咲コウ",1535,1582,1],["T","べらぼう",2025,"蔦屋重三郎","横浜流星",1750,1797],["T","龍馬伝",2010,"坂本龍馬","福山雅治",1836,1867],
+["T","篤姫",2008,"篤姫","宮﨑あおい",1836,1883],["T","西郷どん",2018,"西郷隆盛","鈴木亮平",1828,1877],["T","花燃ゆ",2015,"杉文","井上真央",1843,1921],
+["T","八重の桜",2013,"新島八重","綾瀬はるか",1845,1932],["T","青天を衝け",2021,"渋沢栄一","吉沢亮",1840,1931],["T","いだてん",2019,"金栗四三","中村勘九郎",1891,1983],
+["T","いだてん",2019,"田畑政治","阿部サダヲ",1898,1984],
+["A","風、薫る",2026,"大関和","見上愛",1858,1932],["A","あさが来た",2015,"広岡浅子","波瑠",1849,1919],["A","らんまん",2023,"牧野富太郎","神木隆之介",1862,1957],
+["A","ばけばけ",2025,"小泉セツ","髙石あかり",1868,1932],["A","わろてんか",2017,"吉本せい","葵わかな",1889,1950],["A","花子とアン",2014,"村岡花子","吉高由里子",1893,1968],
+["A","マッサン",2014,"竹鶴政孝","玉山鉄二",1894,1979],["A","ブラッサム",2026,"宇野千代","石橋静河",1897,1996],["A","おちょやん",2020,"浪花千栄子","杉咲花",1907,1973],
+["A","エール",2020,"古関裕而","窪田正孝",1909,1989],["A","まんぷく",2018,"安藤百福","長谷川博己",1910,2007],["A","カーネーション",2011,"小篠綾子","尾野真千子",1913,2006],
+["A","虎に翼",2024,"三淵嘉子","伊藤沙莉",1914,1984],["A","ブギウギ",2023,"笠置シヅ子","趣里",1914,1985],["A","あんぱん",2025,"小松暢","今田美桜",1918,1993],
+["A","べっぴんさん",2016,"坂野惇子","芳根京子",1918,2005],["A","とと姉ちゃん",2016,"大橋鎭子","高畑充希",1920,2013],["A","芋たこなんきん",2006,"田辺聖子","藤山直美",1928,2019],
+["A","ゲゲゲの女房",2010,"武良布枝","松下奈緒",1932,0],["A","スカーレット",2019,"神山清子","戸田恵梨香",1936,0],["A","なつぞら",2019,"奥山玲子","広瀬すず",1936,2007]
+].map(([k,w,y,n,a,b,d,q])=>({k,w,y,n,a,b,d:d||2026,al:!d,q})).sort((p,q)=>p.b-q.b);
+const H={'風、薫る':'上','あさが来た':'下','らんまん':'上','ばけばけ':'下','わろてんか':'下','花子とアン':'上','マッサン':'下','ブラッサム':'下','おちょやん':'下','エール':'上','まんぷく':'下','カーネーション':'下','虎に翼':'上','ブギウギ':'下','あんぱん':'上','べっぴんさん':'下','とと姉ちゃん':'上','芋たこなんきん':'下','ゲゲゲの女房':'上','スカーレット':'下','なつぞら':'上'};
+const B=x=>x.y+'年'+(H[x.w]?H[x.w]+'期':'');
+const SG=[[960,1040],[1110,1230],[1480,2030]],GAP=26,LW=150,w=document.getElementById("w"),info=document.getElementById("info");
+let F="all",S=null,K=2.4;
+function X(v){let o=0;for(const[s,e]of SG){if(v<=e)return o+(Math.max(v,s)-s)*K;o+=(e-s)*K+GAP}return o}
+function R(){const W=X(2030)+16,s=S!==null?D[S]:null;let ax="",gl="",cnt=0;
+SG.forEach(([s0,e0],i)=>{for(let y=Math.ceil(s0/50)*50;y<=e0;y+=50){const l=LW+X(y);ax+=`<span style="left:${l}px">${y}</span>`;gl+=`<div class="gl" style="left:${l}px"></div>`}
+if(i<2)ax+=`<span style="left:${LW+X(e0)+GAP/2+(i?0:0)}px">⋯</span>`});
+const rows=D.map((x,i)=>{if(F!="all"&&x.k!=F)return"";let c="",ob="";
+if(s){if(x===s)c=" sel";else{const a=Math.max(s.b,x.b),e=Math.min(s.d,x.d);if(e>a){cnt++;ob=`<i class="ob" style="left:${X(a)}px;width:${X(e)-X(a)}px"></i>`}else c=" dim"}}
+return`<div class="r${c}" data-i="${i}" style="width:${LW+W}px"><div class="lb"><b>${x.n}</b><small>(${x.a})</small><small>『${x.w}』${B(x)}</small></div><div class="tk" style="width:${W}px"><i class="bar1 ${x.k}" style="left:${X(x.b)}px;width:${X(x.d)-X(x.b)}px">${x.b}${x.q?"?":""}–${x.al?"":x.d}</i>${ob}</div></div>`}).join("");
+const band=s?`<div class="bd" style="left:${LW+X(s.b)}px;width:${X(s.d)-X(s.b)}px"></div>`:"";
+w.style.width=LW+W+"px";w.innerHTML=`<div class="ax" style="width:${LW+W}px">${ax}</div>${gl}${band}${rows}`;
+info.innerHTML=s?`<b>${s.n}</b>（${s.a}）${s.b}–${s.al?"":s.d}　『${s.w}』${B(s)}放送<br>この期間に生きた他の主人公：<b>${cnt}人</b>（枠線つきのバー）`:"人物のバーをタップすると、生きた期間が重なる人を枠で示します。";}
+document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{F=b.dataset.f;document.querySelectorAll("[data-f]").forEach(x=>x.classList.toggle("on",x==b));R()});
+document.getElementById("z").oninput=e=>{K=+e.target.value;R()};
+w.onclick=e=>{const r=e.target.closest(".r");if(!r)return;const i=+r.dataset.i;S=S===i?null:i;R()};
+R();
+</script></body></html>
