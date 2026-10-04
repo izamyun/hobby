@@ -31,20 +31,21 @@ label{margin-left:auto;font-size:12px;color:var(--mu);display:flex;align-items:c
 select{font:inherit;font-size:13px;color:var(--fg);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:3px 2px}#yl{margin-left:0}
 .hd{display:flex;position:sticky;z-index:6;background:var(--bg)}.lb2{position:sticky;left:0;z-index:3;flex:none;width:150px;box-sizing:border-box;background:var(--bg);font-size:11px;color:var(--mu);padding:3px 6px 0 14px;border-right:1px solid var(--ln)}
 .er{position:absolute;top:2px;height:18px;line-height:18px;font-style:normal;font-size:11px;text-align:center;overflow:hidden;white-space:nowrap;background:var(--ln);color:var(--fg);border-radius:4px}.er.e1{background:var(--bd)}
-.ev{position:absolute;top:4px;height:88px;writing-mode:vertical-rl;text-orientation:upright;font-size:10px;letter-spacing:-.5px;white-space:nowrap;overflow:hidden;padding-left:2px;border-left:2px solid var(--t1)}
+.ev{position:absolute;height:13px;line-height:13px;font-size:10px;font-weight:600;white-space:nowrap;padding-left:3px;border-left:2px solid var(--t1)}
 .dv{background:none;border-left:1px dashed var(--t1);opacity:.45}
 .lg i{display:inline-block;width:16px;height:9px;border-radius:3px;vertical-align:middle}.lg i.est{border:2px dashed var(--fg);box-sizing:border-box;background:none}
 footer{color:var(--mu);font-size:11.5px;margin-top:8px}
 </style></head><body>
 <header><h1><span>ドラマ主人公 生没年 線表</span></h1><p class="sub">大河ドラマ全作＋朝ドラ　横にスクロール／バーをタップで重なりを表示</p></header>
-<div class="bar"><button data-f="all" class="on">すべて</button><button data-f="T">大河</button><button data-f="A">朝ドラ</button><button id="p">直近20年</button><button data-s="b" class="on">生年順</button><button data-s="y">放送年順</button><label id="yl">放送年 <select id="y1"></select>〜<select id="y2"></select></label><label>拡大<input id="z" type="range" min="1.2" max="4" step=".2" value="2.4"></label></div>
+<div class="bar"><button data-f="all" class="on">すべて</button><button data-f="T">大河</button><button data-f="A">朝ドラ</button><button id="p">2006年〜</button><button data-s="b" class="on">生年順</button><button data-s="y">放送年順</button><label id="yl">放送年 <select id="y1"></select>〜<select id="y2"></select></label><label>拡大<input id="z" type="range" min="1.2" max="4" step=".2" value="2.4"></label></div>
 <div class="bar lg"><span><i style="background:linear-gradient(90deg,var(--m1),var(--m2))"></i> 男</span><span><i style="background:linear-gradient(90deg,var(--f1),var(--f2))"></i> 女</span><span><i class="est"></i> 架空の人物（推定）</span></div>
 <div id="info"></div>
 <div id="sc"><div id="w"></div></div>
-<footer>?は生没年に諸説。没年なしは存命（2026年として表示）。人物のいない時代は⋯で詰めています。大河は主人公が架空・生没年不明の作品（『三姉妹』『黄金の日日』など）を除く全作。朝ドラは2006年以降の全作と、2005年以前は実在モデルの『あぐり』のみ。大河の架空主人公作品（『獅子の時代』など）は未掲載。点線の帯は架空の主人公で、物語の舞台年から推定した登場期間（没年は描かれないため物語の終了時点まで）です。生没年・配役は照合が済んでいないものを含みます。括弧内は主人公を演じた役者。作品名の横は放送年（朝ドラは上期4〜9月・下期10〜3月）。</footer>
+<footer>?は生没年に諸説。没年なしは存命（2026年として表示）。人物のいない時代は⋯で詰めています。大河は主人公が架空・生没年不明の作品（『三姉妹』『黄金の日日』など）を除く全作。朝ドラは2006年以降の全作と、2005年以前は実在モデルの『あぐり』のみ。大河の架空主人公作品（『獅子の時代』など）は未掲載。点線の帯は架空の主人公で、物語の舞台年から推定した登場期間（没年は描かれないため物語の終了時点まで）です。生没年・配役は照合が済んでいないものを含みます。2027年以降は放送予定（2026年10月4日時点の発表）で、2027年度後期の朝ドラは未発表のため載せていません。括弧内は主人公を演じた役者。作品名の横は放送年（朝ドラは上期4〜9月・下期10〜3月）。</footer>
 <script>
-const FS=new Set(["紫式部","北条政子","ねね","川上貞奴","春日局","日野富子","篤姫","江","井伊直虎","杉文","新島八重","大関和","広岡浅子","小泉セツ","吉本せい","村岡花子","宇野千代","浪花千栄子","小篠綾子","三淵嘉子","笠置シヅ子","小松暢","坂野惇子","大橋鎭子","田辺聖子","武良布枝","神山清子","奥山玲子","吉行あぐり"]);
+const FS=new Set(["紫式部","北条政子","ねね","川上貞奴","春日局","日野富子","篤姫","江","井伊直虎","杉文","新島八重","大関和","広岡浅子","小泉セツ","吉本せい","村岡花子","宇野千代","浪花千栄子","小篠綾子","三淵嘉子","笠置シヅ子","小松暢","坂野惇子","大橋鎭子","田辺聖子","武良布枝","神山清子","奥山玲子","吉行あぐり","斎藤輝子"]);
 const D=[
+["T","逆賊の幕臣",2027,"小栗忠順","松坂桃李",1827,1868],["T","ジョン万",2028,"中濱万次郎","山﨑賢人",1827,1898],["A","巡るスワン",2027,"小松美咲","森田望智",1999,2027,0,1],["A","ほんのモキチ",2028,"斎藤輝子","河合優実",1895,1984],
 ["A","純情きらり",2006,"有森桜子","宮﨑あおい",1913,1946,0,1],["A","どんど晴れ",2007,"内田夏美","比嘉愛未",1983,2007,0,1],["A","ちりとてちん",2007,"和田喜代美","貫地谷しほり",1974,2007,0,1],
 ["A","瞳",2008,"渡瀬瞳","榮倉奈々",1987,2008,0,1],["A","だんだん",2008,"めぐみ・のぞみ","三倉茉奈・佳奈",1988,2008,0,1],["A","つばさ",2009,"玉木つばさ","多部未華子",1987,2009,0,1],
 ["A","ウェルかめ",2009,"浜本波美","倉科カナ",1984,2009,0,1],["A","てっぱん",2010,"村上あかり","瀧本美織",1992,2010,0,1],["A","おひさま",2011,"須藤陽子","井上真央",1915,1960,0,1],
@@ -82,36 +83,37 @@ const D=[
 ["A","べっぴんさん",2016,"坂野惇子","芳根京子",1918,2005],["A","とと姉ちゃん",2016,"大橋鎭子","高畑充希",1920,2013],["A","芋たこなんきん",2006,"田辺聖子","藤山直美",1928,2019],
 ["A","ゲゲゲの女房",2010,"武良布枝","松下奈緒",1932,0],["A","スカーレット",2019,"神山清子","戸田恵梨香",1936,0],["A","なつぞら",2019,"奥山玲子","広瀬すず",1936,2007]
 ].map(([k,w,y,n,a,b,d,q,e])=>({k,w,y,n,a,b,d:d||2026,al:!d,q,e,g:e||FS.has(n)?'F':'M'})).sort((p,q)=>p.b-q.b);
-const H={'風、薫る':'上','あさが来た':'下','らんまん':'上','ばけばけ':'下','わろてんか':'下','花子とアン':'上','あぐり':'上','純情きらり':'上','どんど晴れ':'上','ちりとてちん':'下','瞳':'上','だんだん':'下','つばさ':'上','ウェルかめ':'下','てっぱん':'下','おひさま':'上','梅ちゃん先生':'上','純と愛':'下','あまちゃん':'上','ごちそうさん':'下','まれ':'上','ひよっこ':'上','半分、青い。':'上','おかえりモネ':'上','カムカムエヴリバディ':'下','ちむどんどん':'上','舞いあがれ!':'下','おむすび':'下','マッサン':'下','ブラッサム':'下','おちょやん':'下','エール':'上','まんぷく':'下','カーネーション':'下','虎に翼':'上','ブギウギ':'下','あんぱん':'上','べっぴんさん':'下','とと姉ちゃん':'上','芋たこなんきん':'下','ゲゲゲの女房':'上','スカーレット':'下','なつぞら':'上'};
-const B=x=>x.y+'年'+(H[x.w]?H[x.w]+'期':''),Q=x=>x.y*2+(H[x.w]=='下'?1:0);
-const SA=[[900,1040],[1110,1360],[1430,2030]],GAP=26,LW=150,HT=114,w=document.getElementById("w"),info=document.getElementById("info");
-let F="all",S=null,K=2.4,SG=SA,Y1=1963,Y2=2026,SO='b';
+const H={'風、薫る':'上','あさが来た':'下','らんまん':'上','ばけばけ':'下','わろてんか':'下','花子とアン':'上','あぐり':'上','巡るスワン':'上','ほんのモキチ':'上','純情きらり':'上','どんど晴れ':'上','ちりとてちん':'下','瞳':'上','だんだん':'下','つばさ':'上','ウェルかめ':'下','てっぱん':'下','おひさま':'上','梅ちゃん先生':'上','純と愛':'下','あまちゃん':'上','ごちそうさん':'下','まれ':'上','ひよっこ':'上','半分、青い。':'上','おかえりモネ':'上','カムカムエヴリバディ':'下','ちむどんどん':'上','舞いあがれ!':'下','おむすび':'下','マッサン':'下','ブラッサム':'下','おちょやん':'下','エール':'上','まんぷく':'下','カーネーション':'下','虎に翼':'上','ブギウギ':'下','あんぱん':'上','べっぴんさん':'下','とと姉ちゃん':'上','芋たこなんきん':'下','ゲゲゲの女房':'上','スカーレット':'下','なつぞら':'上'};
+const B=x=>x.y+'年'+(H[x.w]?H[x.w]+'期':'')+(x.y>2026?'予定':''),Q=x=>x.y*2+(H[x.w]=='下'?1:0);
+const SA=[[900,1040],[1110,1360],[1430,2030]],GAP=26,LW=150,w=document.getElementById("w"),info=document.getElementById("info");
+let F="all",S=null,K=2.4,SG=SA,Y1=1963,Y2=2028,SO='b',HT=114;
 function X(v){let o=0;for(const[s,e]of SG){if(v<=e)return o+(Math.max(v,s)-s)*K;o+=(e-s)*K+GAP}return o}
 const ER=[["平安",794,1185],["鎌倉",1185,1333],["室町",1333,1467],["戦国",1467,1573],["安土桃山",1573,1603],["江戸",1603,1853],["幕末",1853,1868],["明治",1868,1912],["大正",1912,1926],["昭和",1926,1989],["平成",1989,2019],["令和",2019,2030]],
-EV=[[940,"将門の乱"],[1185,"壇ノ浦"],[1221,"承久の乱"],[1333,"鎌倉滅亡"],[1467,"応仁の乱"],[1560,"桶狭間"],[1582,"本能寺"],[1600,"関ヶ原"],[1853,"黒船来航"],[1868,"明治維新"],[1923,"関東大震災"],[1945,"終戦"],[1964,"東京五輪"],[2011,"3.11"]];
+EV=[[940,"将門の乱"],[1185,"壇ノ浦"],[1221,"承久の乱"],[1333,"鎌倉幕府滅亡"],[1467,"応仁の乱"],[1560,"桶狭間"],[1582,"本能寺の変"],[1600,"関ヶ原"],[1853,"黒船来航"],[1868,"明治維新"],[1923,"関東大震災"],[1945,"終戦"],[1964,"東京五輪"],[2011,"東日本大震災"]];
 function R(){
 const V=D.filter(x=>(F=="all"||x.k==F)&&x.y>=Y1&&x.y<=Y2).sort((p,q)=>SO=='y'?Q(p)-Q(q)||p.b-q.b:p.b-q.b);
 const mn=Math.min(...V.map(x=>x.b),9999),mx=Math.max(...V.map(x=>x.d),0);
 SG=SA.filter(([a,b])=>b>=mn&&a<=mx);if(!SG.length)SG=SA;
-const W=X(SG[SG.length-1][1])+16,s=S!==null&&V.includes(D[S])?D[S]:null;let ax="",gl="",er="",ev="",cnt=0;
+const W=X(SG[SG.length-1][1])+16,s=S!==null&&V.includes(D[S])?D[S]:null;let ax="",gl="",er="",ev="",cnt=0,ends=[];
 SG.forEach(([a,b],i)=>{for(let y=Math.ceil(a/50)*50;y<=b;y+=50){const l=LW+X(y);ax+=`<span style="left:${l}px">${y}</span>`;gl+=`<div class="gl" style="left:${l}px"></div>`}
 if(i<SG.length-1)ax+=`<span style="left:${LW+X(b)+GAP/2}px">⋯</span>`;
 ER.forEach(([n,e0,e1],j)=>{const A=Math.max(e0,a),B2=Math.min(e1,b);if(B2>A)er+=`<i class="er e${j%2}" style="left:${X(A)}px;width:${X(B2)-X(A)}px">${n}</i>`});
-EV.forEach(([y,t])=>{if(y>=a&&y<=b){ev+=`<b class="ev" style="left:${X(y)}px">${y} ${t}</b>`;gl+=`<div class="gl dv" style="left:${LW+X(y)}px"></div>`}})});
+EV.forEach(([y,t])=>{if(y>=a&&y<=b){const x0=X(y),wd=String(y).length*6+t.length*10+12;let ln=ends.findIndex(e=>e<=x0);if(ln<0)ln=ends.push(0)-1;ends[ln]=x0+wd;ev+=`<b class="ev" style="left:${x0}px;top:${ln*14+3}px">${y} ${t}</b>`;gl+=`<div class="gl dv" style="left:${LW+X(y)}px"></div>`}})});
+const evH=Math.max(ends.length,1)*14+6;HT=22+evH;
 const rows=V.map(x=>{const i=D.indexOf(x);let c="",ob="";
 if(s){if(x===s)c=" sel";else{const a=Math.max(s.b,x.b),e=Math.min(s.d,x.d);if(e>a){cnt++;ob=`<i class="ob" style="left:${X(a)}px;width:${X(e)-X(a)}px"></i>`}else c=" dim"}}
 return `<div class="r${c}" data-i="${i}" style="width:${LW+W}px"><div class="lb"><b>${x.n}</b><small>(${x.a})</small><small>${x.k=="T"?"大":"朝"} ${B(x)}『${x.w}』</small></div><div class="tk" style="width:${W}px"><i class="bar1 ${x.g}${x.e?" e":""}" style="left:${X(x.b)}px;width:${X(x.d)-X(x.b)}px">${x.e?"~":""}${x.b}${x.q?"?":""}–${x.al?"":x.d}</i>${ob}</div></div>`}).join("");
 const band=s?`<div class="bd" style="left:${LW+X(s.b)}px;width:${X(s.d)-X(s.b)}px"></div>`:"";
 const hd=(h,t,c,tp)=>`<div class="hd" style="width:${LW+W}px;height:${h}px;top:${tp}px"><div class="lb2">${t}</div><div class="tk" style="width:${W}px">${c}</div></div>`;
 w.style.width=LW+W+"px";w.style.setProperty("--ht",HT+"px");
-w.innerHTML=hd(22,"時代",er,0)+hd(92,"出来事",ev,22)+`<div class="ax" style="width:${LW+W}px;top:${HT}px">${ax}</div>${gl}${band}${rows}`;
+w.innerHTML=hd(22,"時代",er,0)+hd(evH,"出来事",ev,22)+`<div class="ax" style="width:${LW+W}px;top:${HT}px">${ax}</div>${gl}${band}${rows}`;
 info.innerHTML=s?`<b>${s.n}</b>（${s.a}）${s.e?"~":""}${s.b}–${s.al?"":s.d}${s.e?"（推定・物語の期間）":""}　『${s.w}』${B(s)}放送<br>この期間に生きた他の主人公：<b>${cnt}人</b>（枠線つきのバー）`:`${V.length}人を表示中。バーをタップすると、生きた期間が重なる人を枠で示します。`;}
 document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{SO=b.dataset.s;document.querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on",x==b));R()});
 const Ys=[document.getElementById("y1"),document.getElementById("y2")];
-for(let y=1963;y<=2026;y++)Ys.forEach(e=>e.add(new Option(y+"年",y)));
-Ys[0].value=1963;Ys[1].value=2026;
+for(let y=1963;y<=2028;y++)Ys.forEach(e=>e.add(new Option(y+"年",y)));
+Ys[0].value=1963;Ys[1].value=2028;
 Ys.forEach(e=>e.onchange=()=>{Y1=+Ys[0].value;Y2=+Ys[1].value;R()});
-document.getElementById("p").onclick=()=>{Ys[0].value=Y1=2006;Ys[1].value=Y2=2026;R()};
+document.getElementById("p").onclick=()=>{Ys[0].value=Y1=2006;Ys[1].value=Y2=2028;R()};
 document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{F=b.dataset.f;document.querySelectorAll("[data-f]").forEach(x=>x.classList.toggle("on",x==b));R()});
 document.getElementById("z").oninput=e=>{K=+e.target.value;R()};
 w.onclick=e=>{const r=e.target.closest(".r");if(!r)return;const i=+r.dataset.i;S=S===i?null:i;R()};
